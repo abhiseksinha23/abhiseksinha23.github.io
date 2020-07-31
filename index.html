@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Abhisek Kumar</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  body {
+      font: 400 15px Lato, sans-serif;
+      line-height: 1.8;
+      color: #818181;
+  }
+  h2 {
+      font-size: 24px;
+      text-transform: uppercase;
+      color: #303030;
+      font-weight: 600;
+      margin-bottom: 30px;
+  }
+  h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      color: #303030;
+      font-weight: 400;
+      margin-bottom: 30px;
+  }  
+  .jumbotron {
+      /* background-color: #f4511e; */
+      background-image: url("img/land.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+       /*opacity: 0.7; */
+       height: 650px;
+      color: #fff;
+      font-family: Montserrat, sans-serif;
+  }
+  .myPic {
+    margin-top: 50px;
+    background-image: url("img/myself.jpeg");
+    background-size: cover;
+    height: 270px;
+    width: 270px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  .container-fluid {
+      padding: 60px 50px;
+  }
+  .bg-grey {
+      background-color: #f6f6f6;
+  }
+  .logo-small {
+      color: #f4511e;
+      font-size: 50px;
+  }
+  .logo {
+      color: #f4511e;
+      font-size: 200px;
+  }
+  .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+  }
+  .thumbnail img {
+      width: 100%;
+      height: 100%;
+      margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+      background-image: none;
+      color: #f4511e;
+  }
+  .carousel-indicators li {
+      border-color: #f4511e;
+  }
+  .carousel-indicators li.active {
+      background-color: #f4511e;
+  }
+  .item h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      font-weight: 400;
+      font-style: italic;
+      margin: 70px 0;
+  }
+  .item span {
+      font-style: normal;
+  }
+  .panel {
+      border: 1px solid #f4511e; 
+      border-radius:0 !important;
+      transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+      box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+      border: 1px solid #f4511e;
+      background-color: #fff !important;
+      color: #f4511e;
+  }
+  .panel-heading {
+      color: #fff !important;
+      background-color: #f4511e !important;
+      padding: 25px;
+      border-bottom: 1px solid transparent;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+      background-color: white !important;
+  }
+  .panel-footer h3 {
+      font-size: 32px;
+  }
+  .panel-footer h4 {
+      color: #aaa;
+      font-size: 14px;
+  }
+  .panel-footer .btn {
+      margin: 15px 0;
+      background-color: #f4511e;
+      color: #fff;
+  }
+  .navbar {
+      margin-bottom: 0;
+      background-color: #001d2b;
+      z-index: 9999;
+      border: 0;
+      font-size: 15px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 1px;
+      border-radius: 0;
+      
+  }
+  .navbar li a, .navbar .navbar-brand {
+      color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: #f4511e !important;
+      background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+  }
+  footer .glyphicon {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #f4511e;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;
+      animation-duration: 1s;
+      -webkit-animation-duration: 1s;
+      visibility: visible;
+  }
+  .link:hover {
+    text-decoration: none;
+    color: #001d2b;
+  }
+  .btn1 {
+    color: #f4511e;
+  }
+  .btn1:hover {
+    background: #001d2b;
+    color: white;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+        font-size: 150px;
+    }
+  }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60" style="background-color: #000;color: #fff;">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">ABHISEK KUMAR</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">ABOUT ME</a></li>
+         <li><a href="#skills">SKILLS</a></li>
+        <li><a href="#services">ACTIVITIES</a></li>
+         <li><a href="#codehandle">CODINGHANDLES</a></li>
+        <li><a href="#portfolio">QUOTES</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron text-center" style="padding-top: 17em;">
+	<div style="background-color:#000; opacity: 0.9">
+  <h1 style="color: #fff;opacity: 2.2">Abhisek Kumar</h1> 
+  <p style="color: #fff;"><b>NITian | Coder | Developer | Volleyball player </b></p> 
+  </div>
+</div>
+
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2 style="color: #fff;">About Me</h2><br>
+      <h4 style="color: #fff;">A young enthusiastic boy carrying full of dreams in his eyes, having the hunger for the knowledge and to achieve something big in life.</h4><br>
+      <p>I am currently a 4th year student pursuing <b>Bachelors of Technology</b> from <a href="http://nitjsr.ac.in/" target="_blank" class = "link"><b>National Institute of Technology, Jamshedpur </b></a> in <b>Computer Science and Engineering</b>. I am passionate about learning new stuffs in Computer Science field. I am a <b>Competitive Programmer</b> and a <b>Web developer</b>.</p>
+      <p>
+        <a href="https://www.linkedin.com/in/abhisek-kumar-38148b18a/">
+          <span class="fa fa-linkedin-square" style="font-size:25px"></span> Linkedin
+        </a>
+      </p>
+      <br><a href="./resume/ABHISEK_KUMAR_CV.pdf" download="AbhisekKumarCV.pdf"><button class="btn btn-default btn-lg btn1">My Resume</button></a>
+    </div>
+    <div class="col-sm-4">
+      <div class="myPic">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="skills" class="container-fluid bg-grey" style="background-color: #C0C0C0;color:#000;">
+  <h2 class="text-center" style="color: #000;">SKILLS</h2>
+  <p style="text-align: center;font-size: 20px;color:#000;"><b>I always keep learning new skills as well as keep improving my existing skills.</b></p>
+  <div class="row">
+  	<b>
+  	<div class="col-lg-3">
+  		<ul style="font-size: 16px;color:#000;">
+  			<li>C</li>
+  			<li>Cpp</li>
+  			<li>Python3</li>
+  			<li>HTML</li>
+  			<li>Css</li>
+  			<li>Bootstrap</li>
+  		</ul>
+  	</div>
+  	<div class="col-lg-3">
+  		<ul  style="font-size: 16px;color:#000;">
+  			<li>Javascript</li>
+  			<li>Jquery</li>
+  			<li>PHP</li>
+  			<li>Django</li>
+  			<li>MYSQL</li>
+  			<li>SQLITE</li>
+  		</ul>
+  	</div>
+  	<div class="col-lg-3">
+  		<ul  style="font-size: 16px;color:#000;">
+  			<li>Nodejs</li>
+  			<li>Express</li>
+  			<li>Rest Api</li>
+  			<li>MongoDB</li>
+  			<li>Web Crawling</li>
+  			<li>Web Scraping</li>
+  		</ul>
+  	</div>
+  	<div class="col-lg-3">
+  		<ul  style="font-size: 16px;color:#000;">
+  			<li>Data Structures</li>
+  			<li>Algorithms</li>
+  			<li>Git</li>
+  			<li>Github</li>
+  			<li>Fullstack Development</li>
+  			<li>ReactJs (Beginner)</li>
+  		</ul>
+  	</div>
+  </b>
+  </div>
+  <br>
+  <div class="row" style="text-align: center;">
+  	<b>
+  		<div class="col-lg-12">
+  	Computer Fundaments : DBMS, OOP Concept
+</div>
+  </b>
+</div>
+</div>
+
+<!-- Container (Services Section) -->
+<div id="services" class="container-fluid text-center" style="color: #fff;">
+  <h2 style="color: #fff;">ACTIVITES</h2>
+  <h4 style="color: #fff;">Some of my recent activities</h4>
+  <br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <span class=" 	glyphicon glyphicon-education logo-small"></span>
+      <h4 style="color: #fff;">SCHOOL EDUCATION</h4>
+      <p><b>Chinmaya Vidayalaya B.S.City 2015-2017</b></p>
+      <p><b>Stream: PCM</b></p>
+      <p><b>Percentage: 89.4%</b></p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-heart logo-small"></span>
+      <h4 style="color: #fff;">CURRENT EDUCATION</h4>
+      <p><b>NIT JAMSHEDPUR 2017-2021</b></p>
+      <p><b>Computer Science And Engineering</b></p>
+      <p><b>CGPA: 8.38</b> (till 6th sem)</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-briefcase logo-small"></span>
+      <h4 style="color: #fff;">SOFTWARE DEVELOPER INTERN</h4>
+      <p><b><a href="https://www.wipro.com/en-IN/">WIPRO LIMITED</a></b> JUN 2020 - JULY 2020</p>
+      <ul>
+        <li>Developed Web-crawler from stratch.</li>
+        <li>Implemented a number of functionalities in the web crawler.</li>
+        <li>Collects article related to energy commodities from different provided websites. </li>
+        <li>World Trade price Tracker, Subscription, filter,admin panel, mailing options.</li>
+      </ul>
+    </div>
+  </div>
+  <br><br>
+  <div class="row slideanim">
+  	 <div class="col-sm-4">
+      <span class="glyphicon glyphicon-briefcase logo-small"></span>
+      <h4 style="color: #fff;">WEB DEVELOPER</h4>
+      <p><b>CULFEST</b>(Cultural Fest of NIT Jamshedpur) Aug 2018 - Present</p>
+      <ul>
+        <li>Developed the official websites of CULFEST.</li>
+        <li>Worked/Led the Web team.</li>
+        <li><a href="http://culfest.co.in/culfest20/home/" target="_blank">Visit Website</a></li>
+      </ul>
+    </div>
+  <div class="col-sm-4">
+      <span class="fa fa-linode logo-small"></span>
+      <h4 style="color: #fff;">PROJECTS</h4>
+      <p>For more info refer to my resume</p>
+      <p>Or visit my <a href="https://github.com/abhiseksinha23" target="_blank">Github</a> profile. 
+      <ul>
+        <li>Smartkart: A conversational E-commerce website.</li>
+        <li>QuotesWorld : Platform to share quotes/writeups/thoughts with others.</li>
+        <li>Camping-Ground : Share details of different camping areas, experience and cost/expences.</li>
+        <li>Sell and Buy : Platform to sell or buy old products as well as new products.</li>
+        <li>Notice Bulletin: Platform to share notices of an organisation over the internet.</li>
+        <li>Recipe Book: Platform to share recipes.</li>
+        <li>And more in progress(Working on different projects and technologies)....</li>
+      </ul>
+    </div>
+  	<div class="col-sm-4">
+      <span class="glyphicon glyphicon-briefcase logo-small"></span>
+      <h4 style="color: #fff;">WEB DEVELOPER</h4>
+      <p><b>NSS</b>(National Service Scheme NIT Jamshedpur) March 2019 - Present</p>
+      <ul>
+        <li>Developed the official websites of NSS.</li>
+        <li>Worked with Web team.</li>
+        <li><a href="http://www.nitjsr.ac.in/nss/" target="_blank">Visit Website</a></li>
+      </ul>
+    </div>
+  </div>
+  </div>
+</div>
+
+<br><br>
+  <div id="codehandle" class="container-fluid bg-grey" style="background-color: #C0C0C0;color:#000;">
+  <h2 class="text-center" style="color: #000;">CODING HANDLE ACROSS DIFFERENT CODING PLATFORMS</h2>
+  <div class="row">
+  	<div class="col-sm-3"></div>
+    <div class="col-sm-6" style="text-align: center;">
+     <p style="font-size:18px">HACKEREARTH : <a href="https://www.hackerearth.com/@abhisek2309" target="_blank" style="color:blue;">abhisek2309</a><p>
+      <p style="font-size:18px">CODECHEF : <a href="https://www.codechef.com/users/abhiseksinha23" target="_blank" style="color:blue;">abhiseksinha23</a><p>
+       <p style="font-size:18px">HACKERRANK : <a href="https://www.hackerrank.com/abhiseksinha23" target="_blank" style="color:blue;">abhiseksinha23</a><p>
+       <p style="font-size:18px">LEETCODE : <a href="https://leetcode.com/abhiseksinha23/" target="_blank" style="color:blue;">abhiseksinha23</a><p>
+        <p style="font-size:18px">GEEKSFORGEEKS : <a href="https://auth.geeksforgeeks.org/user/abhiseksinha23/practice/" target="_blank" style="color:blue;">abhiseksinha23</a><p>
+        <p style="font-size:18px">CODEFORCES : <a href="https://codeforces.com/profile/abhiseksinha23" target="_blank" style="color:blue;">abhiseksinha23</a><p>
+      </p>
+    </div>
+  </div>
+</div>
+  <div id="portfolio" class="container-fluid text-center" style="color: #fff;">
+  <h2 style="color: #fff;">MY FAVOURITE QUOTES</h2>
+  <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <h4 style="color: #fff;">"Mastering others is strength. Mastering yourself is true power."<br><span>Lao Tzu</span></h4>
+      </div>
+      <div class="item">
+        <h4 style="color: #fff;">“Talk is cheap. Show me the code.”<br><span>Linus Torvalds</span></h4>
+      </div>
+      <div class="item">
+        <h4 style="color: #fff;">"The starting point of all achievement is desire."<br><span>Napoleon Hill</span></h4>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="container-fluid bg-grey" style="background-color: #C0C0C0;">
+  <h2 class="text-center"style="color:#000;">CONTACT</h2>
+  <div class="row">
+  	<div class="col-sm-3"></div>
+    <div class="col-sm-6" style="text-align: center;color:#000;">
+      <!-- <p>Contact us and we'll get back to you within 24 hours.</p> -->
+      <p style="font-size:18px"><span class="glyphicon glyphicon-map-marker" style="font-size:20px"></span>NIT Jamshedpur, Jamshedpur, Jharkhand 831014 (Current)</p>
+       <p style="font-size:18px"><span class="glyphicon glyphicon-map-marker" style="font-size:20px"></span>N/I-1-1,Pratap Nagar, Naisarai, Ramgarh, Jharkhand 829122 (Permanent)</p>
+      <!-- <p><span class="glyphicon glyphicon-phone"></span> +91 7807104136</p> -->
+      <p style="font-size:18px"><span class="glyphicon glyphicon-envelope" style="font-size:20px"></span> abhiseksinha23@gmail.com / 2017ugcs061@nitjsr.ac.in</p>
+      <p style="font-size:18px"><span class="glyphicon glyphicon-phone" style="font-size:20px"></span> 9110180658 / 9006899673</p>
+      <p style="font-size:18px">
+        <a href="https://www.github.com/abhiseksinha23" style="color:blue;">
+          <span class="fa fa-github-square" style="font-size:20px; color:blue;"></span> Github
+        </a>
+      </p>
+      <p style="font-size:18px">
+        <a href="https://www.linkedin.com/in/abhisek-kumar-38148b18a/" style="color:blue;">
+          <span class="fa fa-linkedin-square" style="font-size:20px; color:blue;"></span> Linkedin
+        </a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p style="color: #fff;">Copyright 2020, Abhisek Kumar</p>
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+</body>
+</html>
+

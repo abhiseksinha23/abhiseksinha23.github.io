@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            var cheerio = require('cheerio')
+            var $ = cheerio.load('https://www.codechef.com/users/vishal_nnd0')
+
+
+            function CC(){
+                document.writeln("out");
+                var problems = [];
+                fac = $('.content .breadcrumbs .breadcrumb')
+                fac.each(function(index, element){
+                    document.writeln(1);
+                    problems[index] = {};
+                    var name = $(this).text();
+                })
+            }
+            function test(){
+                alert("testing...");
+            }
+        </script>
+    </head>
+    <body>
+        <script>
+            CC();
+        </script>
+        hello
+    </body>
+</html>
